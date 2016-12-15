@@ -8,8 +8,8 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
     <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <flow name="day7-mavenprojFlow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/mavenProject" allowedMethods="GET" doc:name="HTTP"/>
-        <set-payload value="#['Welcome to Mule Project 1']" doc:name="Set Payload"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/mavenProject2" allowedMethods="GET" doc:name="HTTP"/>
+        <set-payload value="#['Welcome to Mule Project 2']" doc:name="Set Payload"/>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
